@@ -4,12 +4,19 @@
   "description": "",
   "dependencies": {},
   "devDependencies": {
+    "@testdeck/mocha": "^0.1.2",
+    "@types/chai": "^4.2.18",
+    "@types/node": "^15.0.3",
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "ts-node": "^9.1.1",
     "typescript": "^3.9.3"
   },
   "scripts": {
-    "test": "node test_vector.js",
+    "test": "nyc ./node_modules/.bin/_mocha 'tests/**/*.test.ts'",
     "tsc": "tsc"
   },
-  "author": "",
+  "author": "Aleksei Marashov <marashov-aleksey@yandex.ru>",
   "license": "ISC"
 }

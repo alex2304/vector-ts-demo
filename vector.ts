@@ -1,3 +1,10 @@
+/**
+ * Implementation of one-dimensional numeric Vector data structure.
+ *
+ * Vector supports dot product and cross product, along with few auxiliary operations.
+ * @module
+ */
+
 // since vector is mathematical by the task restriction, it can only contain numeric elements
 type NumericElementType = number;
 
@@ -22,7 +29,7 @@ class Vector<T extends NumericElementType> {
 
     dotProduct(v: Vector<T>): number {
         let result = 0;
-        this.storage.forEach((value: T, index, _) => {
+        this.storage.forEach((value: T, index) => {
             const anotherElement = v.get(index);
             if (anotherElement && value) {
                 result += value * v.get(index);

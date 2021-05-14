@@ -1,4 +1,10 @@
 "use strict";
+/**
+ * Implementation of one-dimensional numeric Vector data structure.
+ *
+ * Vector supports dot product and cross product, along with few auxiliary operations.
+ * @module
+ */
 Object.defineProperty(exports, "__esModule", { value: true });
 var Vector = /** @class */ (function () {
     function Vector() {
@@ -20,7 +26,7 @@ var Vector = /** @class */ (function () {
     };
     Vector.prototype.dotProduct = function (v) {
         var result = 0;
-        this.storage.forEach(function (value, index, _) {
+        this.storage.forEach(function (value, index) {
             var anotherElement = v.get(index);
             if (anotherElement && value) {
                 result += value * v.get(index);
